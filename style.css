@@ -22,6 +22,10 @@
     background-color: #5b5b5b;
 }
 
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 255);
+}
+
 /* hero background image */
 .bgimage {
     height: 100vh;
