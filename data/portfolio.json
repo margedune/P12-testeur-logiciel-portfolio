@@ -3,7 +3,7 @@
         "image": "image1.png",
         "title": "Booki",
         "text": "Création de la page d'acceuil d'une agence de voyage avec HTML et CSS.",
-        "link": "#"
+        "link": "https://github.com/margedune/booking.git"
     },
     {
         "image": "image2.png",
@@ -15,6 +15,6 @@
         "image": "image3.png",
         "title": "Kasa",
         "text": "Création d'une application web de location immobilière avec React.",
-        "link": "#"
+        "link": "https://github.com/margedune/TesteurLogiciel_appli_location_immobiliere_React.git"
     }
 ]
