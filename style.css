@@ -19,27 +19,39 @@
 
 /* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
-    background-color: #5b5b5b;
+    background-color: #333333; /* Darker color for better contrast */
 }
 
 .navbar-dark .navbar-nav .nav-link {
-    color: rgba(255, 255, 255, 255);
+    color: #FFFFFF; /* High contrast for default link text */
+    font-weight: 600; /* Slightly bolder for readability */
+}
+
+.navbar-dark .navbar-nav .nav-link:focus,
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: #00ffcc; /* High contrast color on hover and focus */
+    text-decoration: underline; /* Added underline for better visibility */
 }
 
 /* hero background image */
 .bgimage {
     height: 100vh;
     max-height: 900px;
-    background: url("images/image1.jpg");
+    background: url("images/image1.jpg") no-repeat center center;
     background-size: cover;
     position: relative;
 }
-/* text css above hero image*/
+
+/* text css above hero image */
 .hero_title {
     font-size: 4.5rem;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
 }
 .hero_desc {
     font-size: 2rem;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    color: #ffffff;
 }
 .hero-text {
     text-align: center;
@@ -53,16 +65,19 @@
 /* about */
 .imageAboutPage {
     width: 100%;
-}
-.imageAboutPage {
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border: 3px solid #198754; /* Add border for focus */
 }
 
 /* skills */
 .skillsText.card {
     height: 350px;
     cursor: pointer;
+    border: 1px solid #ddd;
+    transition: all 0.3s;
+    background-color: #ffffff;
+    color: #333333; /* Improved contrast for text */
 }
 .skillsText img {
     width: 100%;
@@ -71,25 +86,37 @@
 }
 #skills p {
     text-align: center;
+    color: #333333; /* Ensure text contrast */
 }
 .skillsIcon {
     font-size: 36px;
     text-align: center;
     width: 100%;
+    color: #198754;
 }
 .card-title {
     text-align: center;
+    color: #333333; /* Improved contrast */
 }
 .card:hover .skillsIcon {
-    color: #008000;
+    color: #198754;
 }
 .skillsText:hover {
-    border: 1px solid #008000;
+    border: 2px solid #198754;
+    transform: scale(1.05); /* Add slight zoom on hover */
+    background-color: #f8f9fa; /* Ensure hover contrast */
 }
 
 /* portfolio */
 #portfolio p {
     text-align: center;
+    color: #333333; /* Ensure contrast */
+}
+
+.responsive-image {
+    width: 100%; /* L'image s'ajuste à la largeur du conteneur */
+    height: auto; /* Maintient le ratio d'aspect */
+    display: block; /* Supprime les espaces blancs autour de l'image */
 }
 
 /* contact */
@@ -97,9 +124,31 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: transform 0.2s;
+    color: #333333; /* Improved text contrast */
 }
 .contactColumn i {
     color: #198754;
+}
+.contactColumn:hover {
+    transform: translateY(-10px); /* Add a subtle lift effect */
+}
+
+/* links in contact section */
+.contactColumn a {
+    color: #198754;
+    text-decoration: none;
+}
+.contactColumn a:hover,
+.contactColumn a:focus {
+    text-decoration: underline;
+    color: #14532d;
+}
+
+/* Add focus for accessibility */
+:focus {
+    outline: 2px solid #00ffcc;
+    outline-offset: 2px;
 }
 
 /* footer */
